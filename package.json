@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "ejs": "^2.5.7",
-    "kerouac": "0.0.x"
+    "kerouac": "0.0.x",
+    "kerouac-cname": "^0.1.0",
+    "kerouac-robotstxt": "^0.2.0",
+    "kerouac-sitemap": "^0.2.0"
   }
 }
