@@ -1,5 +1,5 @@
 ---
-title: 'Home'
+title: 'Install'
 ---
 
 Install kerouac by...
