@@ -1,2 +1,2 @@
-site:
+html:
 	node site
