@@ -30,4 +30,9 @@ an easy-to-read, easy-to-write plain text format.  It is converted to HTML with
 layouts using [EJS](https://ejs.co/) as a template language.  EJS allows
 templates to be developed directly using HTML.
 
-CSS is generated using [Tailwind CSS](https://tailwindcss.com/).
+CSS is generated using [Tailwind CSS](https://tailwindcss.com/).  Tailwind was
+chosen primarily due to the well-designed templates and components available
+from [Tailwind UI](https://tailwindui.com/).  The templates provide a starting
+point for a complete website, while also being easy to customize without needing
+to tinker with perplexing CSS rules.
+
