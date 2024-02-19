@@ -3,7 +3,7 @@ var kerouac = require('kerouac');
 
 var site = kerouac();
 site.set('base url', 'https://www.kerouacjs.org');
-site.set('output', 'dist');
+//site.set('output', 'dist');
 
 //site.engine('ejs', require('ejs'));
 
