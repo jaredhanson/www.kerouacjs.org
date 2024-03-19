@@ -59,3 +59,14 @@ new history.  The working directory still contains the source files used to buil
 the site, however.  The second command, `git reset --hard`, resets the working
 tree, removing the source files from the directory.  At this point, an empty
 commit is recorded to initialize the branch, and the branch is pushed to GitHub.
+
+Once the publishing source branch has been pushed to GitHub, switch back to the
+main development branch.
+
+```sh
+$ git checkout master
+```
+
+```sh
+$ git worktree add -B gh-pages _site origin/gh-pages
+```

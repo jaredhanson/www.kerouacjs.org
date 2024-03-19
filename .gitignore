@@ -1,4 +1,4 @@
-dist/
+_site/
 
 # Mac OS X
 .DS_Store
