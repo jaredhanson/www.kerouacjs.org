@@ -36,3 +36,26 @@ from [Tailwind UI](https://tailwindui.com/).  The templates provide a starting
 point for a complete website, while also being easy to customize without needing
 to tinker with perplexing CSS rules.
 
+Once generated, this site is hosted by [GitHub Pages](https://pages.github.com).
+
+### Deployment
+
+This site is deployed to [GitHub Pages](https://pages.github.com/).  The
+`gh-pages` branch is [configured as the publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+for the site.  When changes are pushed to that branch, they will be published to
+the site.
+
+The `gh-pages` branch was initialized using the following commands:
+
+```sh
+$ git checkout --orphan gh-pages
+$ git reset --hard
+$ git commit --allow-empty -m "Initializing gh-pages branch"
+$ git push origin gh-pages
+```
+
+The first command, `git checkout --orphan gh-pages`, creates a new branch with a
+new history.  The working directory still contains the source files used to build
+the site, however.  The second command, `git reset --hard`, resets the working
+tree, removing the source files from the directory.  At this point, an empty
+commit is recorded to initialize the branch, and the branch is pushed to GitHub.
