@@ -66,7 +66,7 @@ that tracks the `gh-pages` branch is added at path `_site`.
 $ git worktree add -B gh-pages _site origin/gh-pages
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > It is not necessary to manually add a working tree at `_site`.  The worktree
 > is added automatically by `make` targets.
 
@@ -111,6 +111,11 @@ new history.  The working directory still contains the source files used to buil
 the site, however.  The second command, `git reset --hard`, resets the working
 tree, removing the source files from the directory.  At this point, an empty
 commit is recorded to initialize the branch, and the branch is pushed to GitHub.
+
+> [!NOTE]
+> This initialization proceedure only needs to be performed once, and should not
+> be necessary again.  It is captured here for completeness, in the event the
+> environment needs to be rebuilt from scratch.
 
 Once the publishing source branch has been pushed to GitHub, switch back to the
 main development branch.
