@@ -40,10 +40,28 @@ Once generated, this site is hosted by [GitHub Pages](https://pages.github.com).
 
 ## Operations
 
-This site is deployed to [GitHub Pages](https://pages.github.com/).  The
-`gh-pages` branch is [configured as the publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-for the site.  When changes are pushed to that branch, they will be published to
-the site.
+This site is hosted by [GitHub Pages](https://pages.github.com/).  GitHub Pages
+is a static site hosting service that serves files from a repository on [GitHub](https://github.com/).
+
+### Domain
+
+GitHub Pages is configured to serve this site at the custom domain
+`www.kerouacjs.org`.
+
+To use `www` as the subdomain, a [CNAME record has been configured](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
+at [Porkbun](https://porkbun.com/), the DNS host for `kerouacjs.org`.
+The [apex domain has also been configured](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+with `A` and `AAAA` records.  GitHub Pages [automatically redirects](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant)
+requests sent to `kerouacjs.org` to `www.kerouacjs.org`.
+
+### Deploy
+
+This site is deployed using GitHub Pages.  The `gh-pages` branch is [configured
+as the publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+for the site.  Whenever changes are pushed to that source branch, they will be
+published to the site.
+
+##### Initialization
 
 The `gh-pages` branch was initialized using the following commands:
 
@@ -60,6 +78,8 @@ the site, however.  The second command, `git reset --hard`, resets the working
 tree, removing the source files from the directory.  At this point, an empty
 commit is recorded to initialize the branch, and the branch is pushed to GitHub.
 
+##### Post-Initialization
+
 Once the publishing source branch has been pushed to GitHub, switch back to the
 main development branch.
 
@@ -67,17 +87,13 @@ main development branch.
 $ git checkout master
 ```
 
+Then, add a new working tree that tracks the `gh-pages` publishing source branch
+at path `_site`.
+
 ```sh
 $ git worktree add -B gh-pages _site origin/gh-pages
 ```
 
-### Domain
-
-GitHub Pages is configured to serve this site at the custom domain
-`www.kerouacjs.org`.
-
-To use `www` as the subdomain, a [CNAME record has been configured](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain)
-at [Porkbun](https://porkbun.com/), the DNS host for `kerouacjs.org`.
-The [apex domain has also been configured](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
-with `A` and `AAAA` records.  GitHub Pages [automatically redirects](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant)
-requests sent to `kerouacjs.org` to `www.kerouacjs.org`.
+This path is where Keroauc will output the generated site.  From there, changes
+can be pushed to the remote repository at GitHub, where they will then be
+published to GitHub Pages.
