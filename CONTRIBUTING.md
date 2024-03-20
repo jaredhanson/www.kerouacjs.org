@@ -34,26 +34,6 @@ $ git push origin gh-pages  # deploy site
 
 ## Development
 
-### Source Control
-
-This repository has two independent commit histories.  The first, on the
-`master` branch, contains the source code used to generate the site.  The
-second, on the `gh-pages` branch, contains the generated site.  The `gh-pages`
-branch is configured as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-To track these two histories from within the same repository, a working tree
-that tracks the `gh-pages` branch is added at path `_site`.
-
-```sh
-$ git worktree add -B gh-pages _site origin/gh-pages
-```
-
-> [!NOTE]  
-> It is not necessary to manually add a working tree at `_site`.  The worktree
-> is added automatically by `make` targets.
-
-This path is where the generated site will be output.
-
 ### Architecture
 
 The architecture of this site is simple: it is a static site consisting of HTML,
@@ -73,6 +53,26 @@ chosen primarily due to the well-designed templates and components available
 from [Tailwind UI](https://tailwindui.com/).  The templates provide a starting
 point for a complete website, while also being easy to customize without needing
 to tinker with perplexing CSS rules.
+
+### Source Control
+
+This repository has two independent commit histories.  The first, on the
+`master` branch, contains the source code used to generate the site.  The
+second, on the `gh-pages` branch, contains the generated site.  The `gh-pages`
+branch is configured as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+To track these two histories from within the same repository, a working tree
+that tracks the `gh-pages` branch is added at path `_site`.
+
+```sh
+$ git worktree add -B gh-pages _site origin/gh-pages
+```
+
+> [!NOTE]  
+> It is not necessary to manually add a working tree at `_site`.  The worktree
+> is added automatically by `make` targets.
+
+This path is where the generated site will be output.
 
 ## Operations
 
