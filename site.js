@@ -9,6 +9,7 @@ site.set('base url', 'https://www.kerouacjs.org');
 
 site.use(kerouac.content('content'));
 
+site.page('/CNAME', require('kerouac-cname')());
 //site.plug(require('kerouac-sitemap')());
 //site.plug(require('kerouac-robotstxt')());
 
