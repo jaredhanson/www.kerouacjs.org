@@ -1,4 +1,4 @@
-# Contributing to www.kerouacjs.org
+# Contributing to `www.kerouacjs.org`
 
 ## Getting Started
 
