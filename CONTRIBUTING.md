@@ -9,9 +9,26 @@ and [Git](https://git-scm.com/).  Once these tools are set up, you can build
 this site by executing the following commands:
 
 ```sh
-git clone https://github.com/jaredhanson/www.kerouacjs.org
-cd www.kerouacjs.org
-make
+$ git clone https://github.com/jaredhanson/www.kerouacjs.org
+$ cd www.kerouacjs.org
+$ make
+```
+
+A typical development workflow is as follows:
+
+```sh
+# ... hack hack hack ...
+$ make
+$ cd _site
+$ git diff                  # review changes to generated site
+$ git add --all
+$ git commit                # commit changes to generated site
+$ git push origin gh-pages  # deploy site
+$ cd ..
+$ git diff                  # review changes to source code
+$ git add --all
+$ git commit                # commit changes to source code
+$ git push origin master
 ```
 
 ## Development
@@ -38,8 +55,8 @@ This path is where the generated site will be output.  Changes to the site can
 be inspected within its working tree.
 
 ```sh
-cd _site
-git diff
+$ cd _site
+$ git diff
 ```
 
 ### Architecture
@@ -61,8 +78,6 @@ chosen primarily due to the well-designed templates and components available
 from [Tailwind UI](https://tailwindui.com/).  The templates provide a starting
 point for a complete website, while also being easy to customize without needing
 to tinker with perplexing CSS rules.
-
-Once generated, this site is hosted by [GitHub Pages](https://pages.github.com).
 
 ## Operations
 
