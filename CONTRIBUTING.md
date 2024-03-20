@@ -52,13 +52,7 @@ $ git worktree add -B gh-pages _site origin/gh-pages
 > It is not necessary to manually add a working tree at `_site`.  The worktree
 > is added automatically by `make` targets.
 
-This path is where the generated site will be output.  Changes to the site can
-be inspected within its working tree.
-
-```sh
-$ cd _site
-$ git diff
-```
+This path is where the generated site will be output.
 
 ### Architecture
 
