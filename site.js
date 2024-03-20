@@ -1,4 +1,5 @@
 var kerouac = require('kerouac');
+var book = require('kerouac-book');
 // TODO: kerouac-cname
 
 var site = kerouac();
@@ -7,6 +8,7 @@ site.set('base url', 'https://www.kerouacjs.org');
 
 //site.engine('ejs', require('ejs'));
 
+site.use('/tutorials/quickstart', book('docs/tutorials/quickstart'));
 site.use(kerouac.content('content'));
 
 site.page('/CNAME', require('kerouac-cname')());
@@ -18,7 +20,8 @@ site.generate(
   {
     '/': [
       kerouac.content.createMapper(),
-    ]
+    ],
+    '/tutorials/quickstart': book.createMapper('docs/tutorials/quickstart'),
   },
   function(err) {
     if (err) {
