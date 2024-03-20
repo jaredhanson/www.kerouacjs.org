@@ -19,16 +19,17 @@ A typical development workflow is as follows:
 ```sh
 # ... hack hack hack ...
 $ make
-$ cd _site
-$ git diff                  # review changes to generated site
-$ git add --all
-$ git commit                # commit changes to generated site
-$ git push origin gh-pages  # deploy site
-$ cd ..
+$ git status                # review changes to source code
 $ git diff                  # review changes to source code
 $ git add --all
 $ git commit                # commit changes to source code
 $ git push origin master
+$ cd _site                  # change to working tree of generated site
+$ git status                # review changes to generated site
+$ git diff                  # review changes to generated site
+$ git add --all
+$ git commit                # commit changes to generated site
+$ git push origin gh-pages  # deploy site
 ```
 
 ## Development
