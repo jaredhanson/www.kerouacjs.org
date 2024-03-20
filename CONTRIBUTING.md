@@ -113,7 +113,7 @@ tree, removing the source files from the directory.  At this point, an empty
 commit is recorded to initialize the branch, and the branch is pushed to GitHub.
 
 > [!NOTE]
-> This initialization proceedure only needs to be performed once, and should not
+> This initialization procedure only needs to be performed once, and should not
 > be necessary again.  It is captured here for completeness, in the event the
 > environment needs to be rebuilt from scratch.
 
