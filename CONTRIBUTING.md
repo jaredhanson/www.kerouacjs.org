@@ -1,8 +1,6 @@
 # Contributing to www.kerouacjs.org
 
-## Development
-
-### Getting Started
+## Getting Started
 
 This site is statically generated using [Kerouac.js](https://github.com/jaredhanson/kerouac).
 
@@ -18,25 +16,32 @@ make
 
 ## Development
 
-#### Change Management
+#### Source Control
 
-With the 
+This repository has two independent commit histories.  The first, on the
+`master` branch, contains the source code used to generate the site.  The
+second, on the `gh-pages` branch, contains the generated site.  The `gh-pages`
+branch is configured as the [publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-
-> [!NOTE]  
-> It is not necessary to manually add a working tree at `_site`.  The worktree
-> is added automatically by `make` targets.
-
-Then, add a new working tree that tracks the `gh-pages` publishing source branch
-at path `_site`.
+To track these two histories from within the same repository, a working tree
+that tracks the `gh-pages` branch is added at path `_site`.
 
 ```sh
 $ git worktree add -B gh-pages _site origin/gh-pages
 ```
 
-This path is where Keroauc will output the generated site.  From there, changes
-can be pushed to the remote repository at GitHub, where they will then be
-published to GitHub Pages.
+> [!NOTE]  
+> It is not necessary to manually add a working tree at `_site`.  The worktree
+> is added automatically by `make` targets.
+
+This path is where he generated site will be written.  Changes to the site can
+be inspected within its working tree.
+
+```sh
+cd _site
+git diff
+```
+
 
 ### Architecture
 
