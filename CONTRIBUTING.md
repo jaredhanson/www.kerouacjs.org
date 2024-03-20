@@ -16,6 +16,28 @@ cd www.kerouacjs.org
 make
 ```
 
+## Development
+
+#### Change Management
+
+With the 
+
+
+> [!NOTE]  
+> It is not necessary to manually add a working tree at `_site`.  The worktree
+> is added automatically by `make` targets.
+
+Then, add a new working tree that tracks the `gh-pages` publishing source branch
+at path `_site`.
+
+```sh
+$ git worktree add -B gh-pages _site origin/gh-pages
+```
+
+This path is where Keroauc will output the generated site.  From there, changes
+can be pushed to the remote repository at GitHub, where they will then be
+published to GitHub Pages.
+
 ### Architecture
 
 The architecture of this site is simple: it is a static site consisting of HTML,
@@ -78,8 +100,6 @@ the site, however.  The second command, `git reset --hard`, resets the working
 tree, removing the source files from the directory.  At this point, an empty
 commit is recorded to initialize the branch, and the branch is pushed to GitHub.
 
-#### Post-Initialization
-
 Once the publishing source branch has been pushed to GitHub, switch back to the
 main development branch.
 
@@ -87,20 +107,13 @@ main development branch.
 $ git checkout master
 ```
 
-Then, add a new working tree that tracks the `gh-pages` publishing source branch
-at path `_site`.
-
-```sh
-$ git worktree add -B gh-pages _site origin/gh-pages
-```
-
-This path is where Keroauc will output the generated site.  From there, changes
-can be pushed to the remote repository at GitHub, where they will then be
-published to GitHub Pages.
-
-> [!NOTE]  
-> It is not necessary to manually add a working tree at `_path`.  The worktree
-> is added automatically by `make` targets.
-
 #### Publish
 
+Push changes from the `gh-pages` branch of the local repository to the remote
+repository at GitHub.
+
+```sh
+git push origin gh-pages
+```
+
+Once pushed, the site will be published to GitHub Pages.
