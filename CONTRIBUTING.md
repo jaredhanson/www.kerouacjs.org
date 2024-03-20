@@ -16,7 +16,7 @@ make
 
 ## Development
 
-#### Source Control
+### Source Control
 
 This repository has two independent commit histories.  The first, on the
 `master` branch, contains the source code used to generate the site.  The
@@ -34,14 +34,13 @@ $ git worktree add -B gh-pages _site origin/gh-pages
 > It is not necessary to manually add a working tree at `_site`.  The worktree
 > is added automatically by `make` targets.
 
-This path is where he generated site will be written.  Changes to the site can
+This path is where the generated site will be output.  Changes to the site can
 be inspected within its working tree.
 
 ```sh
 cd _site
 git diff
 ```
-
 
 ### Architecture
 
@@ -81,7 +80,7 @@ The [apex domain has also been configured](https://docs.github.com/en/pages/conf
 with `A` and `AAAA` records.  GitHub Pages [automatically redirects](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant)
 requests sent to `kerouacjs.org` to `www.kerouacjs.org`.
 
-### Deploy
+### Deployment
 
 This site is deployed using GitHub Pages.  The `gh-pages` branch is [configured
 as the publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
