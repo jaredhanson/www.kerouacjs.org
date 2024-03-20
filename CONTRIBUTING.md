@@ -61,7 +61,7 @@ as the publishing source](https://docs.github.com/en/pages/getting-started-with-
 for the site.  Whenever changes are pushed to that source branch, they will be
 published to the site.
 
-##### Initialization
+#### Initialization
 
 The `gh-pages` branch was initialized using the following commands:
 
@@ -78,7 +78,7 @@ the site, however.  The second command, `git reset --hard`, resets the working
 tree, removing the source files from the directory.  At this point, an empty
 commit is recorded to initialize the branch, and the branch is pushed to GitHub.
 
-##### Post-Initialization
+#### Post-Initialization
 
 Once the publishing source branch has been pushed to GitHub, switch back to the
 main development branch.
@@ -97,3 +97,10 @@ $ git worktree add -B gh-pages _site origin/gh-pages
 This path is where Keroauc will output the generated site.  From there, changes
 can be pushed to the remote repository at GitHub, where they will then be
 published to GitHub Pages.
+
+> [!NOTE]  
+> It is not necessary to manually add a working tree at `_path`.  The worktree
+> is added automatically by `make` targets.
+
+#### Publish
+
