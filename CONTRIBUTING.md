@@ -7,7 +7,7 @@ and [Git](https://git-scm.com/).  Once these tools are set up, you can build
 this site by executing the following commands:
 
 ```sh
-$ git clone https://github.com/jaredhanson/www.kerouacjs.org
+$ git clone https://github.com/jaredhanson/www.kerouacjs.org.git
 $ cd www.kerouacjs.org
 $ make
 ```
